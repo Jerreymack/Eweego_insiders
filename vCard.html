@@ -18,7 +18,7 @@
 }
 
 button {     
-  display: block;
+  display: none;
   position: absolute;
   top: 40%;
   left: 50%;
@@ -222,8 +222,13 @@ button {
         param = urlArray[1] 
         usID = atob(param)
 
-        $('.contact_img').attr('src','https://eweego.nyc3.cdn.digitaloceanspaces.com/Mobile_Users_Photo/' + usID + '.jpeg')
-        $('.contact_img').fadeIn()
+        setTimeout(function(){
+
+           $('.contact_img').attr('src','https://eweego.nyc3.cdn.digitaloceanspaces.com/Mobile_Users_Photo/' + usID + '.jpeg')
+           $('.contact_img').fadeIn()
+           $('button').fadeIn()
+           
+        },1000) 
 
         var settings = {
                "url": 'https://eweego-s.tor1.cdn.digitaloceanspaces.com/Eweego_Employees/contact_' + usID + '.json',
