@@ -234,7 +234,18 @@ button {
         param = urlArray[1] 
         usID = atob(param)
 
-         alert(usID)
+        //alert(usID)
+
+        var settings = {
+               "url": 'https://eweego-s.tor1.cdn.digitaloceanspaces.com/Eweego_Employees/contact_' + usID + '.json',
+               "method": "GET",
+               "cache": false,
+               "dataType": "json"
+         };
+        $.ajax(settings).done(function (data) {
+             
+                alert(JSON.stringify(data))   
+        })
 
      //$(".usdata").html(usData); 
   
