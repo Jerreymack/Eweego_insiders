@@ -411,6 +411,9 @@ flipCard.addEventListener("click", function() {
 
 $(document).ready(function () {
 
+          const id = $('.idx').html()
+          const idCrypted = btoa(id)
+
           setTimeout(function () {
             $("#qrweb").qrcode({
               width: 50,
@@ -424,7 +427,7 @@ $(document).ready(function () {
             $("#qrcontact").qrcode({
               width: 90,
               height: 90,
-              text: 'http://eweego_contact/bertrand_makon.html'
+              text: 'https://eweegocontacts.netlify.app/vCard.html?param=' + idCrypted
             });
           }, 1000);
   
