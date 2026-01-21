@@ -145,6 +145,8 @@ button {
 </head>
 <body>
 
+    <div class="contact_data" style="font-size:0px"></div> 
+
     <div class="trad" style="font-size:0px">
       {"fr":{"tap":"Tapez sur l'icône","import":"pour télécharger la vCard et l'importer dans vos contacts"},"en":{"tap":"Tap the icon","import":"to download the vCard and import it into your contacts"},"es":{"tap":"Toca el icono","import":"para descargar la vCard e importarla a tus contactos"},"ar":{"tap":"انقر على الأيقونة","import":"لتنزيل بطاقة vCard وإضافتها إلى جهات اتصالك"},"cn":{"tap":"点击图标","import":"以下载vCard并导入到您的联系人中"},"de":{"tap":"Tippen Sie auf das Symbol","import":"um die vCard herunterzuladen und in Ihre Kontakte zu importieren"},"hi":{"tap":"आइकन पर टैप करें","import":"vCard डाउनलोड करने और अपने संपर्कों में आयात करने के लिए"},"ln":{"tap":"Bɛtɛ na elilingi","import":"mpo na kokɔtisa vCard na bakɔntɛki na yo"},"jp":{"tap":"アイコンをタップ","import":"してvCardをダウンロードし、連絡先にインポートします"},"pt":{"tap":"Toque no ícone","import":"para baixar o vCard e importá-lo para seus contatos"},"ru":{"tap":"Нажмите на иконку","import":"чтобы скачать vCard и импортировать её в ваши контакты"},"it":{"tap":"Tocca l'icona","import":"per scaricare la vCard e importarla nei tuoi contatti"},"tr":{"tap":"Simgeye dokunun","import":"vCard'ı indirmek ve kişilerinize aktarmak için"},"nl":{"tap":"Tik op het pictogram","import":"om de vCard te downloaden en in uw contacten te importeren"},"pl":{"tap":"Stuknij ikonę","import":"aby pobrać wizytówkę vCard i zaimportować ją do kontaktów"},"bg":{"tap":"Докоснете иконата","import":"за да изтеглите vCard и да я импортирате в контактите си"},"sw":{"tap":"Gonga kishufaa","import":"kupakua kadi ya vCard na kuiingiza kwenye mawasiliano yako"},"yo":{"tap":"Tẹ aami naa","import":"lati gba vCard silẹ ki o si fi sii awọn olubasọrọ rẹ"}}
     </div> 
@@ -168,21 +170,7 @@ button {
     <script>
         function downloadContact() {
             // Sample contact data
-            var contactData = {
-                firstName: "John",
-                lastName: "Doe",
-                phone: "+123456789",
-                email: "john.doe@example.com",
-                address: "123 Main St, Cityville",
-                photo: "https://example.com/john-doe-photo.jpg",  // URL to the photo
-                website: "https://www.example.com",
-                about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum fermentum sodales.",
-                socialMedia: {
-                    twitter: "https://twitter.com/johndoe",
-                    linkedIn: "https://www.linkedin.com/in/johndoe",
-                    facebook: "https://www.facebook.com/johndoe"
-                }
-            };
+            var contactData = JSON.parse($('.contact_data').html())
 
             // Generate vCard data
             var vCardData =
@@ -243,8 +231,9 @@ button {
                "dataType": "json"
          };
         $.ajax(settings).done(function (data) {
-             
-                alert(JSON.stringify(data))   
+          
+             $('.contact_data').html(JSON.stringify(data))
+
         })
 
      //$(".usdata").html(usData); 
