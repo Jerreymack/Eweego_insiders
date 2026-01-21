@@ -106,7 +106,7 @@ button {
 
 .contact_img {
   position: absolute;
-  display: block;
+  display: none;
   width: 68px;
   height: 68px;
   border-radius: 40px;
@@ -120,7 +120,7 @@ button {
 
 .contact {
   position: absolute;
-  display: block;
+  display: none;
   width: 100%;
   font-family: 'helvetica neue', 'roboto', sans-serif;
   font-weight: 400;
@@ -222,7 +222,8 @@ button {
         param = urlArray[1] 
         usID = atob(param)
 
-        //alert(usID)
+        $('.contact_img').attr('src','https://eweego.nyc3.cdn.digitaloceanspaces.com/Mobile_Users_Photo/' + usID + '.jpeg')
+        $('.contact_img').faden()
 
         var settings = {
                "url": 'https://eweego-s.tor1.cdn.digitaloceanspaces.com/Eweego_Employees/contact_' + usID + '.json',
@@ -233,6 +234,8 @@ button {
         $.ajax(settings).done(function (data) {
           
              $('.contact_data').html(JSON.stringify(data))
+             $('.contact').html(data.firstName + ' ' + data.lastName)
+             $('.contact').fadeIn()
 
         })
 
