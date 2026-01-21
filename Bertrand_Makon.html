@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+      /* Body Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f7f7f7; /* Dark background for contrast */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.pinicon_front {     
+  display: block;
+  position: absolute;
+  top: 62%;
+  right: -200px;
+  transform: translateY(-50%);
+  filter: contrast(100%);
+  filter: opacity(12%);
+  z-index: 0
+}
+
+.eweeg {
+  position: absolute;
+  display: inline-block;
+  left: 20px;
+  bottom: 20px;
+  height: 30px;
+  width: 70px;
+  font-family: 'helvetica neue', 'roboto', sans-serif;
+  font-weight: 200;
+  font-size: 24px;
+  text-align: right;    
+  color: #999;          
+}
+
+  
+.o {
+  position: absolute;
+  display: inline-block;
+  left: 91px;
+  bottom: 19px;
+  height: 26px;
+  width: 26px;
+  background-image: linear-gradient(to top right, #ff6a00, #ff6a00, #fff);
+  border-radius: 20px;
+  z-index: 0
+}
+
+.eweeg_ {
+  position: absolute;
+  display: inline-block;
+  left: 64px;
+  top: 30px;
+  height: 30px;
+  width: 70px;
+  font-family: 'helvetica neue', 'roboto', sans-serif;
+  font-weight: 200;
+  font-size: 46px;
+  text-align: right;    
+  color: #000;          
+}
+
+  
+.o_ {
+  position: absolute;
+  display: inline-block;
+  left: 194px;
+  top: 38px;
+  height: 52px;
+  width: 52px;
+  background-image: linear-gradient(to top right, #000, #222, #666);
+  border-radius: 36px;
+  z-index: 0
+}
+
+
+.pinicon_back {     
+  display: block;
+  position: absolute;
+  top: 62%;
+  right: -200px;
+  transform: translateY(-50%);
+  filter: contrast(100%);
+  filter: opacity(20%);
+  z-index: 1
+}
+
+.name { 
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: 62%;
+  transform: translateY(-50%);
+  font-family: 'helvetica neue', 'roboto', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  text-align: left; 
+  margin-left: 80px;
+  color: #000; 
+}
+
+.job { 
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: calc(62% + 26px);
+  transform: translateY(-50%);
+  font-family: 'helvetica neue', 'roboto', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: left; 
+  margin-left: 80px;
+  color: #000; 
+}
+
+
+.office { 
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: calc(62% + 66px);
+  transform: translateY(-50%);
+  font-family: 'helvetica neue', 'roboto', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  text-align: left; 
+  margin-left: 80px;
+  color: #444; 
+}
+
+
+.mobile { 
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: calc(62% + 86px);
+  transform: translateY(-50%);
+  font-family: 'helvetica neue', 'roboto', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  text-align: left; 
+  margin-left: 80px;
+  color: #444; 
+}
+
+.email { 
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: calc(62% + 106px);
+  transform: translateY(-50%);
+  font-family: 'helvetica neue', 'roboto', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  text-align: left; 
+  margin-left: 80px;
+  color: #444; 
+}
+
+.web { 
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: calc(62% + 126px);
+  transform: translateY(-50%);
+  font-family: 'helvetica neue', 'roboto', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  text-align: left; 
+  margin-left: 80px;
+  color: #444; 
+}
+
+
+.addr { 
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: calc(62% + 150px);
+  transform: translateY(-50%);
+  font-family: 'helvetica neue', 'roboto', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  text-align: left; 
+  margin-left: 80px;
+  color: #444; 
+}
+
+.addr2 { 
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: calc(62% + 166px);
+  transform: translateY(-50%);
+  font-family: 'helvetica neue', 'roboto', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  text-align: left; 
+  margin-left: 80px;
+  color: #444; 
+}
+
+
+#qrweb { 
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: calc(62% + 148px);
+  transform: translateY(-50%);
+  font-family: 'helvetica neue', 'roboto', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  text-align: left;
+  width: 50px;
+  height: 50px;
+  right: 20px;
+  color: #444; 
+}
+
+#qrcontact { 
+  position: absolute;
+  display: block;
+  top: calc(18% + 0px);
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-family: 'helvetica neue', 'roboto', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  text-align: left;
+  width: 90px;
+  height: 90px;
+  color: #444; 
+}
+
+.company { 
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: calc(18% + 56px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'helvetica neue', 'roboto', sans-serif;
+  font-weight: 500;
+  font-size: 9px;
+  text-align: center; 
+  color: #444; 
+}
+  
+
+/* Card Container Styling */
+.card-container {
+  perspective: 1500px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Flip Card Base Styling */
+.flip-card {
+  width: 320px;
+  height: 500px;
+  background: none;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Flip Card Inner Styling */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease-in-out;
+}
+
+/* Flip Card (flipped state) */
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Card Faces */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+/* Front Face Styling */
+.flip-card-front {
+  background: linear-gradient(135deg, #666, #222, #000);
+  color: white;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.flip-card-front h3 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.flip-card-front p {
+  font-size: 18px;
+  opacity: 0.8;
+  letter-spacing: 1px;
+}
+
+/* Back Face Styling */
+.flip-card-back {
+  background: #ffffff;
+  color: #333;
+  transform: rotateY(180deg);
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.flip-card-back h3 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.flip-card
+    </style>
+
+  </head>
+    
+  <body>
+  <meta name="format-detection" content="telephone=no">
+
+<div class="card-container">
+  <div class="flip-card" id="flipCard">
+    <div class="flip-card-inner">
+      <!-- Front Side -->
+      <div class="flip-card-front">
+         <div class="eweeg_">eweeg</div>
+         <div class="o_"></div>
+        <img class="pinicon_front" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBjbGFzcz0icGluaWNvbiI+CiA8ZyBjbGFzcz0ibGF5ZXIiPgogIDx0aXRsZT5MYXllciAxPC90aXRsZT4KICA8ZyBpZD0ic3ZnXzEiLz4KICA8ZyBpZD0ic3ZnXzciPgogICA8cGF0aCBjbGFzcz0iYWN0aXZlLXBhdGgiIGQ9Im0zNzEuNTYsNTQuNjVjLTMyLjg5LC0zMi42NSAtNzYuNjQsLTUwLjY1IC0xMjMuMTYsLTUwLjY1Yy00Ni41NCwwIC05MC4yNywxNy45OSAtMTIzLjE3LDUwLjY1Yy02MC44OSw2MC40MyAtNjguNDUsMTc0LjE0IC0xNi4zOSwyNDMuMDRsMTM5LjU2LDIwMC4wOGwxMzkuMzQsLTE5OS44YzUyLjI4LC02OS4xNyA0NC43MSwtMTgyLjg4IC0xNi4xOCwtMjQzLjMxbDAsMHptLTEyMS41NiwxODMuOGMtMzUuMDUsMCAtNjMuNTgsLTI4LjMyIC02My41OCwtNjMuMTNzMjguNTMsLTYzLjEzIDYzLjU4LC02My4xM3M2My41OCwyOC4zMiA2My41OCw2My4xM3MtMjguNTMsNjMuMTMgLTYzLjU4LDYzLjEzeiIgZGF0YS1vbGRfY29sb3I9IiMwMDAwMDAiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGZpbGw9InVybCgjc3ZnXzE4KSIgaWQ9InN2Z18yIi8+CiAgIDxlbGxpcHNlIGN4PSIyNTEuNTQiIGN5PSIxOTEuODQiIGZpbGw9IiNiYmIiIGlkPSJzdmdfMyIgcng9Ijc4Ljg2IiByeT0iODEuMiIgc3Ryb2tlPSIjYmJiIiBzdHJva2Utd2lkdGg9IjUiLz4KICAgPGVsbGlwc2UgY3g9IjI0Ny41NCIgY3k9IjE3NS45NCIgZmlsbD0iIzk5OSIgaWQ9InN2Z181IiByeD0iMzUuNTgiIHJ5PSIzNS4yMSIgc3Ryb2tlPSIjOTk5IiBzdHJva2Utd2lkdGg9IjUiLz4KICAgPGVsbGlwc2UgY3g9IjE0My41NiIgY3k9IjE3NS4zIiBmaWxsPSIjN2Y3ZjdmIiBpZD0ic3ZnXzQiIHJ4PSIzNS41OCIgcnk9IjM1LjIxIiBzdHJva2U9IiM3ZjdmN2YiIHN0cm9rZS13aWR0aD0iNSIvPgogICA8ZWxsaXBzZSBjeD0iMzUxLjc0IiBjeT0iMTc1Ljk3IiBmaWxsPSIjY2NjIiBpZD0ic3ZnXzYiIHJ4PSIzNS41OCIgcnk9IjM1LjIxIiBzdHJva2U9IiNjY2MiIHN0cm9rZS13aWR0aD0iNSIvPgogIDwvZz4KIDwvZz4KIDxkZWZzPgogIDxsaW5lYXJHcmFkaWVudCBpZD0ic3ZnXzE4IiB4MT0iMC41MyIgeDI9IjAuNTQiIHkxPSIwLjIiIHkyPSIwIj4KICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjYmJiIi8+CiAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2ZmZiIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiA8L2RlZnM+Cjwvc3ZnPg==">
+         <div class="eweeg">eweeg</div>
+         <div class="o"></div>
+      </div>
+      <!-- Back Side -->
+      <div class="flip-card-back">
+        <div id="qrcontact"></div>
+        <h class="company">EWEEGO TECH INC</h>
+        <img class="pinicon_back" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBjbGFzcz0icGluaWNvbiI+CiA8ZyBjbGFzcz0ibGF5ZXIiPgogIDx0aXRsZT5MYXllciAxPC90aXRsZT4KICA8ZyBpZD0ic3ZnXzEiLz4KICA8ZyBpZD0ic3ZnXzciPgogICA8cGF0aCBjbGFzcz0iYWN0aXZlLXBhdGgiIGQ9Im0zNzEuNTYsNTQuNjVjLTMyLjg5LC0zMi42NSAtNzYuNjQsLTUwLjY1IC0xMjMuMTYsLTUwLjY1Yy00Ni41NCwwIC05MC4yNywxNy45OSAtMTIzLjE3LDUwLjY1Yy02MC44OSw2MC40MyAtNjguNDUsMTc0LjE0IC0xNi4zOSwyNDMuMDRsMTM5LjU2LDIwMC4wOGwxMzkuMzQsLTE5OS44YzUyLjI4LC02OS4xNyA0NC43MSwtMTgyLjg4IC0xNi4xOCwtMjQzLjMxbDAsMHptLTEyMS41NiwxODMuOGMtMzUuMDUsMCAtNjMuNTgsLTI4LjMyIC02My41OCwtNjMuMTNzMjguNTMsLTYzLjEzIDYzLjU4LC02My4xM3M2My41OCwyOC4zMiA2My41OCw2My4xM3MtMjguNTMsNjMuMTMgLTYzLjU4LDYzLjEzeiIgZGF0YS1vbGRfY29sb3I9IiMwMDAwMDAiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGZpbGw9InVybCgjc3ZnXzE4KSIgaWQ9InN2Z18yIi8+CiAgIDxlbGxpcHNlIGN4PSIyNTEuNTQiIGN5PSIxOTEuODQiIGZpbGw9IiNiYmIiIGlkPSJzdmdfMyIgcng9Ijc4Ljg2IiByeT0iODEuMiIgc3Ryb2tlPSIjYmJiIiBzdHJva2Utd2lkdGg9IjUiLz4KICAgPGVsbGlwc2UgY3g9IjI0Ny41NCIgY3k9IjE3NS45NCIgZmlsbD0iIzk5OSIgaWQ9InN2Z181IiByeD0iMzUuNTgiIHJ5PSIzNS4yMSIgc3Ryb2tlPSIjOTk5IiBzdHJva2Utd2lkdGg9IjUiLz4KICAgPGVsbGlwc2UgY3g9IjE0My41NiIgY3k9IjE3NS4zIiBmaWxsPSIjN2Y3ZjdmIiBpZD0ic3ZnXzQiIHJ4PSIzNS41OCIgcnk9IjM1LjIxIiBzdHJva2U9IiM3ZjdmN2YiIHN0cm9rZS13aWR0aD0iNSIvPgogICA8ZWxsaXBzZSBjeD0iMzUxLjc0IiBjeT0iMTc1Ljk3IiBmaWxsPSIjY2NjIiBpZD0ic3ZnXzYiIHJ4PSIzNS41OCIgcnk9IjM1LjIxIiBzdHJva2U9IiNjY2MiIHN0cm9rZS13aWR0aD0iNSIvPgogIDwvZz4KIDwvZz4KIDxkZWZzPgogIDxsaW5lYXJHcmFkaWVudCBpZD0ic3ZnXzE4IiB4MT0iMC41MyIgeDI9IjAuNTQiIHkxPSIwLjIiIHkyPSIwIj4KICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjYmJiIi8+CiAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2ZmZiIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiA8L2RlZnM+Cjwvc3ZnPg==">
+        <h class="name">BERTRAND MAKON</h>
+        <h class="job">CEO</h>
+        <h class="office">+1 514 548 3362 &nbsp;&nbsp;ext. 703</h>
+        <h class="mobile">+1 514 638 0590</h>
+        <h class="email">bertrand@eweego.ca</h>
+        <h class="web">www.eweego.com</h>
+        <h class="addr">1400-75 Queen, Montreal,</h>
+        <h class="addr2">QC H3C 2N6, Canada</h>
+        <div id="qrweb"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"
+        integrity="sha512-NFUcDlm4V+a2sjPX7gREIXgCSFja9cHtKPOL1zj6QhnE0vcY695MODehqkaGYTLyL2wxe/wtr4Z49SvqXq12UQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+
+    <script>
+      // Get the card element
+const flipCard = document.getElementById("flipCard");
+
+// Toggle the 'flipped' class on click
+flipCard.addEventListener("click", function() {
+  flipCard.classList.toggle("flipped");
+});
+
+
+
+$(document).ready(function () {
+
+          setTimeout(function () {
+            $("#qrweb").qrcode({
+              width: 50,
+              height: 50,
+              text: 'www.eweego.com'
+            });
+          }, 1000);
+  
+  
+          setTimeout(function () {
+            $("#qrcontact").qrcode({
+              width: 90,
+              height: 90,
+              text: 'http://eweego_contact/bertrand_makon.html'
+            });
+          }, 1000);
+  
+});
+    </script>
+
+  </body>
+  
+</html>
